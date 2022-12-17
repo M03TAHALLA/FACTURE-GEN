@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php include '../Include/head.php'; ?>
+
+<?php include '../Include/nav.php'; ?>
     
 
 
-<section class="vh-100" style="background-color: #9A616D;">
+<section class="vh-100 bg-secondary" >
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="C:\xampp\htdocs\FacturePHP\FACTURE-GEN\media\businessman-checking-documents-at-table.webp"
+              <img src="..\..\media\person-working-at-desk-in-vintage-90-s-style-office.webp"
                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -27,7 +21,8 @@
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                    <span class="h1 fw-bold mb-0">Logo</span>
+                    <img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark " alt="">
+                    <span class="h1 fw-bold mb-0  ps-2">IN-VOICER</span>
                   </div>
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
@@ -61,6 +56,4 @@
 
 
 
-
-</body>
-</html>
+<?php include '../Include/foot.php'; ?>
