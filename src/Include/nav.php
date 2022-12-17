@@ -6,7 +6,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 justify-content-center">
 
-  <a href=""><img src="..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark" alt=""></a>
+  <a href=""><img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark" alt=""></a>
     <a class="navbar-brand ps-1" href="#">    IN-VOICER</a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
