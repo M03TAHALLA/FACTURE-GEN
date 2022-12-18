@@ -8,7 +8,7 @@
 		<style>
 			td{
 				text-align : center;
-				padding : 30px;
+				padding : 20px;
 			}
 			table{
 				border : solid 10px;
