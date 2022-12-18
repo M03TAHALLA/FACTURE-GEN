@@ -3,17 +3,17 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-        <title>Commercial Liste</title>
+        <title>Article Liste</title>
 	</head>
 	<body>
-        <h1>LISTE Commercial</h1>
+        <h1>LISTE Articles</h1>
 		<?php
 		$mysqli = new mysqli($servername,$username,$password,$username);
-		$requete = "SELECT * FROM commercial ";
+		$requete = "SELECT * FROM articles ";
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {
             
-			echo @$ligne['IdCommercial'] . ' ' . @$ligne['Nom'] . ' ' . @$ligne['Prenom'] . ' ' . @$ligne['Role'] . ' ' . @$ligne['Sexe'] .' ' . @$ligne['Email'] .' ' . @$ligne['Password']. '<br>';
+			echo @$ligne['IdArticle'] . ' ' . @$ligne['NomArticle'] . ' ' . @$ligne['Description'] . ' ' . @$ligne['Prix'] . '<br>';
 		}
 		$mysqli->close();
 		?>
