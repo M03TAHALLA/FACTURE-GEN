@@ -5,7 +5,7 @@
 
 	<?php include('Show_Client_Liste.php');?>
 
-	  <title>FOURNISSEURS</title>
+	  <title>FOURNISSEURS AND CLIENTS</title>
   </head>
   <body>
 	<div class = "container ">
