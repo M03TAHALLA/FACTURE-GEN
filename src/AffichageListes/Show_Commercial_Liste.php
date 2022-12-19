@@ -3,7 +3,6 @@
 	include ("../Include/nav.php");
 	
 	?>
-	<body>
 <div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">COMMERCIAUX</li>
