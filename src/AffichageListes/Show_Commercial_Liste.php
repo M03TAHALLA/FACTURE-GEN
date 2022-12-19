@@ -1,26 +1,11 @@
 <?php include("../../db/conn.php"); 
 	include("../Include/head.php"); 
 	include ("../Include/nav.php");
-	
+	include("../Admin/Check_If_Admin.php");
 	?>
-<!-- <!DOCTYPE html>
-<html lang="fr">
-	<center>
-	<head>
-		<meta charset="utf-8">
-        <title>Commercial Liste</title>
-		<style>
-			td{
-				text-align : center;
-				padding : 20px;
-			}
-			table{
-				border : solid 10px;
-				padding : 50px
-			}
-		</style>
-	</head>
-	<body> -->
+
+
+
 <div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">COMMERCIAUX</li>
@@ -48,7 +33,14 @@
         <td><?php echo @$ligne['IdCommercial']?></th>
         <td><?php echo @$ligne['Nom']?></td>
         <td><?php echo @$ligne['Prenom']?></td>
-		<td><?php echo @$ligne['Role']?></td>
+		<td><?php
+		if(@$ligne['Admin'] == true){
+			echo "admin";
+		}
+		else
+			echo "user";
+		 
+		 ?></td>
 		<td><?php echo @$ligne['Sexe']?></td>
         <td><?php echo @$ligne['Email']?></td>
 		<td><?php echo @$ligne['Password'].'<br>'?></td>
