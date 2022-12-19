@@ -24,10 +24,10 @@
         <th>IdCommercial</th>
         <th>Nom</th>
         <th>Prenom</th>
-		<th>Role</th>
         <th>Sexe</th>
         <th>Email</th>
         <th>Password</th>
+		<th>Admin</th>
       </tr>
     </thead>
 		<?php
@@ -40,13 +40,15 @@
         <td><?php echo @$ligne['IdCommercial']?></th>
         <td><?php echo @$ligne['Nom']?></td>
         <td><?php echo @$ligne['Prenom']?></td>
-		<td><?php echo @$ligne['Role']?></td>
 		<td><?php echo @$ligne['Sexe']?></td>
         <td><?php echo @$ligne['Email']?></td>
-		<td><?php echo @$ligne['Password'].'<br>'?></td>
-
-
-
+		<td><?php echo @$ligne['Password']?></td>
+		<td><?php 
+			if($ligne['Admin']== 1)
+				echo "Admin <br>";
+			else
+				echo "Utilisateur <br>";
+		?></td>
       </tr>
 		<?php }
 		$mysqli->close();
