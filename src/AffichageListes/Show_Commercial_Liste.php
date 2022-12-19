@@ -1,5 +1,9 @@
-<?php include("../../db/conn.php") ?>
-<!DOCTYPE html>
+<?php include("../../db/conn.php"); 
+	include("../Include/head.php"); 
+	include ("../Include/nav.php");
+	
+	?>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 	<center>
 	<head>
@@ -16,18 +20,22 @@
 			}
 		</style>
 	</head>
-	<body>
-        <h1>LISTE Commercial</h1>
-		<table>
-		<thead>
+	<body> -->
+<div class = "container ">
+<ol class="breadcrumb   my-4 ">
+        <li class="breadcrumb-item active">COMMERCIAUX</li>
+    </ol>
+	<div class="table-responsive">
+		<table id="table_devis" class="table table-hover  ">
+		<thead class="table-dark">
       <tr>
-        <th>IdCommercial</th>
-        <th>Nom</th>
-        <th>Prenom</th>
-		<th>Role</th>
-        <th>Sexe</th>
-        <th>Email</th>
-        <th>Password</th>
+        <th scope="col">IdCommercial</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+		<th scope="col">Role</th>
+        <th scope="col">Sexe</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
       </tr>
     </thead>
 		<?php
@@ -36,7 +44,7 @@
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {?>
 	<tbody>
-      <tr>
+      <tr scope="row">
         <td><?php echo @$ligne['IdCommercial']?></th>
         <td><?php echo @$ligne['Nom']?></td>
         <td><?php echo @$ligne['Prenom']?></td>
@@ -53,6 +61,9 @@
 		?>
 		</tbody>
 		</table>
-	</body> 
+		</div>
+</div>
+	<!-- </body> 
 	</center>
-</html>
+</html> -->
+<?php include '../Include/foot.php'; ?>
