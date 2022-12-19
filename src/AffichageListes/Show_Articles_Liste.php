@@ -1,8 +1,13 @@
 <?php include("../../db/conn.php"); 
 	include("../Include/head.php"); 
-	include ("../Include/nav.php");
-	
-	?>
+?>
+
+
+	  <title>ARTICLES</title>
+  </head>
+  <body>
+<?php 	include ("../Include/nav.php");?>
+	  
         <div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">ARTICLES</li>
