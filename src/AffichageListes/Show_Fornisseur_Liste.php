@@ -2,18 +2,7 @@
 	include("../Include/head.php"); 
 	include ("../Include/nav.php");
 	
-	?><!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-        <title>Fornisseur Liste</title>
-		<style>
-			td,tr{
-				text-align : center;
-				padding : 20px;
-			}
-		</style>
-	</head>
+	?>
 	<body>
 	<div class = "container ">
 <ol class="breadcrumb   my-4 ">
@@ -49,6 +38,4 @@
 		</table>
 		</div>
 	</div>
-	</body> 
-</html>
 <?php include '../Include/foot.php'; ?>
