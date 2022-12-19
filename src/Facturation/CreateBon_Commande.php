@@ -1,7 +1,7 @@
 <?php include '../Include/head.php'; ?>
 
 
-	  <title>Creation Devis</title>
+	  <title>Creation Bon De Commande</title>
   </head>
   <body>
 <?php 	include ("../Include/nav.php");?>
