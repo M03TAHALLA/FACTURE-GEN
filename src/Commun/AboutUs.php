@@ -1,6 +1,10 @@
 <?php include '../Include/head.php'; ?>
 
-<?php include '../Include/nav.php'; ?>
+
+	  <title>ABOUT US</title>
+  </head>
+  <body>
+<?php 	include ("../Include/nav.php");?>
 
 
 

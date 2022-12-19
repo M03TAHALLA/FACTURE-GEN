@@ -2,12 +2,13 @@
 
 <!-- INCLUDING NECESSARY FILES  -->
 <?php 
-  include '../Include/head.php'; 
-  include '../Include/nav.php';
   include '../../db/conn.php';
-  ?>
-
-
+  include '../Include/head.php'; 
+	?>
+	  <title>LOGIN</title>
+  </head>
+  <body>
+<?php 	include ("../Include/nav.php");?>
 <!-- CHECK IF ALREADY LOGGED IN -->
 
 <?php 

@@ -1,10 +1,11 @@
 
 <?php include '../Include/head.php'; ?>
 
-<?php include '../Include/nav.php'; ?>
 
-
-
+	  <title>HOME</title>
+  </head>
+  <body>
+<?php 	include ("../Include/nav.php");?>
 <div class="container">
 <div class="bg-white py-5">
  <!-- HOME -->
