@@ -1,6 +1,8 @@
 
 
-
+<?php
+              session_start();
+?>
 
 
   <!-- NAVBAR -->
@@ -41,7 +43,14 @@
             <li><a class="dropdown-item" href="#">ABOUT US</a></li>
             <li><a class="dropdown-item" href="#">CONTACT US</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">LOGOUT</a></li>
+            
+              <?php
+              if(!isset($_SESSION['IdCommercial'])){ ?>
+                <li><a class="dropdown-item" href="../Authentification/login.php">LOGIN</a></li>
+                <?php }
+                else{ ?>
+            <li><a class="dropdown-item" href="../Authentification/logout.php">LOGOUT</a></li>
+                <?php  } ?>
           </ul>
       </div>
     </div>

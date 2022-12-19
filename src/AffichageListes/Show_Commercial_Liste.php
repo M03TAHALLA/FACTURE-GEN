@@ -60,6 +60,13 @@
 		</table>
 		</div>
 </div>
+<<<<<<< HEAD
 	 </body> 
 </html> 
 <?php include '../Include/foot.php'; ?>
+=======
+	<!-- </body> 
+	</center>
+</html> -->
+<?php include '../Include/foot.php'; ?>
+>>>>>>> 36998aa8f604873ec4f96a25603259f1a604a601
