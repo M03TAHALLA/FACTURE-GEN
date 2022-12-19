@@ -34,4 +34,3 @@
 		</table>
 		</div>
 	</div>
-<?php include '../Include/foot.php'; ?>

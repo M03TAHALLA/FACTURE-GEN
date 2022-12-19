@@ -1,11 +1,13 @@
 <?php include("../../db/conn.php"); 
-	include("../Include/head.php"); 
-	
+	include("../Include/head.php");
 	?>
+	<?php 	include ("../Include/nav.php");?>
+
+	<?php include('Show_Client_Liste.php');?>
+
 	  <title>FOURNISSEURS</title>
   </head>
   <body>
-<?php 	include ("../Include/nav.php");?>
 	<div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">FORNISSEURS</li>
@@ -41,4 +43,3 @@
 		</div>
 	</div>
 <?php include '../Include/foot.php'; ?>
-<?php include('Show_Client_Liste.php');
