@@ -41,3 +41,4 @@
 		</div>
 	</div>
 <?php include '../Include/foot.php'; ?>
+<?php include('Show_Client_Liste.php');
