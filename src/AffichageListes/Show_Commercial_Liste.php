@@ -3,24 +3,19 @@
 	include ("../Include/nav.php");
 	
 	?>
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
-	<center>
 	<head>
 		<meta charset="utf-8">
         <title>Commercial Liste</title>
 		<style>
-			td{
+			td,tr{
 				text-align : center;
 				padding : 20px;
 			}
-			table{
-				border : solid 10px;
-				padding : 50px
-			}
 		</style>
 	</head>
-	<body> -->
+	<body>
 <div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">COMMERCIAUX</li>
@@ -65,7 +60,6 @@
 		</table>
 		</div>
 </div>
-	<!-- </body> 
-	</center>
-</html> -->
+	 </body> 
+</html> 
 <?php include '../Include/foot.php'; ?>
