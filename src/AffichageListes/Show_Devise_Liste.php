@@ -1,25 +1,28 @@
-<?php include("../../db/conn.php") ?>
-<!DOCTYPE html>
-<html lang="fr">
-	<center>
-	<head>
-		<meta charset="utf-8">
-        <title>Devise Liste</title>
-		<style>
-			td{
-				text-align : center;
-				padding : 20px;
-			}
-			table{
-				border : solid 10px;
-				padding : 50px
-			}
-		</style>
-	</head>
-	<body>
-        <h1>FICHE DEVISES</h1>
-		<table>
-		<thead>
+<?php include("../../db/conn.php"); 
+	include("../Include/head.php"); 
+	include ("../Include/nav.php");
+	
+	?> <!DOCTYPE html>
+	<html lang="fr">
+		<head>
+			<meta charset="utf-8">
+			<title>DEVISES Liste</title>
+			<style>
+				td,tr{
+					text-align : center;
+					padding : 20px;
+				}
+			</style>
+		</head>
+		<body>
+        <div class = "container ">
+<ol class="breadcrumb   my-4 ">
+        <li class="breadcrumb-item active">DEVISES</li>
+    </ol>
+	<div class="table-responsive">
+		<table id="table_devis" class="table table-hover  ">
+		
+		<thead class="table-dark">
       <tr>
         <th>NumDevis</th>
         <th>IdClient</th>
@@ -28,13 +31,15 @@
         <th>TotalePrix</th>
       </tr>
     </thead>
+			
 		<?php
 		$mysqli = new mysqli($servername,$username,$password,$username);
 		$requete = "SELECT * FROM fichdevis";
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {?>
+		
 	<tbody>
-      <tr>
+      <tr scope="row">
         <td><?php echo @$ligne['NumDevis']?></th>
         <td><?php echo @$ligne['IdClient']?></td>
         <td><?php echo @$ligne['DateCreation']?></td>
@@ -45,7 +50,10 @@
 		$mysqli->close();
 		?>
 		</tbody>
+		
 		</table>
-	</body> 
-	</center>
+		</div>
+	</div>
+	 </body> 
 </html>
+<?php include '../Include/foot.php'; ?>

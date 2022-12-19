@@ -1,26 +1,27 @@
-<?php include("../../db/conn.php") ?>
-<!DOCTYPE html>
+<?php include("../../db/conn.php"); 
+	include("../Include/head.php"); 
+	include ("../Include/nav.php");
+	
+	?><!DOCTYPE html>
 <html lang="fr">
-	<center>
 	<head>
 		<meta charset="utf-8">
         <title>Fornisseur Liste</title>
 		<style>
-			td{
+			td,tr{
 				text-align : center;
 				padding : 20px;
-			}
-			table{
-				border : solid 10px;
-				padding : 50px
 			}
 		</style>
 	</head>
 	<body>
-        <h1>LISTE Fornisseur</h1>
-		<table>
-		<thead>
-      <tr>
+	<div class = "container ">
+<ol class="breadcrumb   my-4 ">
+        <li class="breadcrumb-item active">FORNISSEURS</li>
+    </ol>
+	<div class="table-responsive">
+		<table id="table_devis" class="table table-hover  ">
+		<thead class="table-dark">
         <th>IdFornisseur</th>
         <th>Nom</th>
         <th>Prenom</th>
@@ -34,7 +35,7 @@
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {?>
 	<tbody>
-      <tr>
+      <tr scope="row">
         <td><?php echo @$ligne['IdFornisseur']?></th>
         <td><?php echo @$ligne['Nom']?></td>
         <td><?php echo @$ligne['Prenom']?></td>
@@ -46,6 +47,8 @@
 		?>
 		</tbody>
 		</table>
+		</div>
+	</div>
 	</body> 
-	</center>
 </html>
+<?php include '../Include/foot.php'; ?>
