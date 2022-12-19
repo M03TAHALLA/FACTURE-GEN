@@ -1,7 +1,10 @@
 <?php include '../Include/head.php'; ?>
 
-<?php include '../Include/nav.php'; ?>
-    
+
+	  <title>CONTACT US</title>
+  </head>
+  <body>
+<?php 	include ("../Include/nav.php");?>    
 
 
 <!-- Wrapper container -->
