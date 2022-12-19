@@ -29,23 +29,13 @@
 		<table id="table_devis" class="table table-hover  ">
 		<thead class="table-dark">
       <tr>
-<<<<<<< HEAD
         <th>IdCommercial</th>
         <th>Nom</th>
         <th>Prenom</th>
+		<th>Role</th>
         <th>Sexe</th>
         <th>Email</th>
         <th>Password</th>
-		<th>Admin</th>
-=======
-        <th scope="col">IdCommercial</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Prenom</th>
-		<th scope="col">Role</th>
-        <th scope="col">Sexe</th>
-        <th scope="col">Email</th>
-        <th scope="col">Password</th>
->>>>>>> 8fa180a7e50d8de0bfe002fcdd59a12af9bde712
       </tr>
     </thead>
 		<?php
