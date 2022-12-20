@@ -13,6 +13,13 @@
 <?php 
 $error = "";
 $success = "";
+$email = "";
+$password = "";
+$cpassword = "";
+$nom = "";
+$sexe ="";
+$user_type = "";
+$prenom = "";
   // STARTING A SESSION
 if(isset($_POST['submit'])){
 

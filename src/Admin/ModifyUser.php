@@ -129,11 +129,15 @@
                     </div>
                   </div>
 
-
-                  <select name="sexe" >
+                  <div class=" flex-row align-items-center mb-4">                 
+                    <div class="form-outline  mb-0">
+                  <select name="sexe" class="form-select  " style="width:auto;">
                     <option value="Male"<?php if($sexe == "Male") echo "selected"; ?>>Homme</option>
                     <option value="Female"<?php if($sexe == "Female") echo "selected"; ?>>Femme</option>
                   </select>
+                  <label class="form-label" for="sexe">Sexe </label>
+                    </div>
+                  </div>
 
 
                   <div class=" flex-row align-items-center mb-4">
@@ -152,11 +156,15 @@
                     </div>
                   </div>
 
-
-                  <select name="user_type" >
+                    <div class=" flex-row align-items-center mb-4">
+                    <div class="form-outline  mb-0">
+                  <select name="user_type" class="form-select" style="width:auto;">
                     <option value="user" <?php if($user_type == false) echo "selected"; ?>>user</option>
                     <option value="admin" <?php if($user_type == true) echo "selected"; ?>>admin</option>
                   </select>
+                       <label class="form-label" for="user_type">Role </label>
+                  </div>
+                  </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="submit" name="submit" class="btn btn-primary btn-lg">confirmer</button>
