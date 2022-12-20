@@ -32,7 +32,7 @@
         </p>
       </div>
       <div class="card-footer cardFooter_">
-        <a href="#"><button class="btn button_style">START</button></a>
+        <a href="../Facturation/CreateDevis.php"><button class="btn button_style">START</button></a>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
         <p class="card-text">Retrouvez facilement tous vos devis en cas de besoin. Votre devis pourra alors devenir une facture en quelques clics.</p>
       </div>
       <div class="card-footer cardFooter_">
-        <a href="#"><button class="btn button_style">START</button></a>
+        <a href="../AffichageListes/Show_Devise_Liste.php"><button class="btn button_style">START</button></a>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
         </p>
       </div>
       <div class="card-footer cardFooter_ " >
-        <a href="#"><button class="btn button_style">START</button></a>
+        <a href="../AffichageListes/Show_Fornisseur_Liste.php"><button class="btn button_style">START</button></a>
       </div>
     </div>
   </div>
@@ -81,7 +81,7 @@
       <div class="col-lg-6 ms-3"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
         <h2 class="font-weight-light">Vous ne savez pas par où commencer?</h2>
         <p class="font-italic text-muted mb-4 ">C'est bon, nous sommes là pour vous aider !!
-            Nous avons une page de documentation super facile qui vous expliquera tout.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Apprendre encore plus</a>
+            Nous avons une page de documentation super facile qui vous expliquera tout.</p><a href="AboutUs.php" class="btn btn-light px-5 rounded-pill shadow-sm">Apprendre encore plus</a>
       </div>
     </div>
   </div>
