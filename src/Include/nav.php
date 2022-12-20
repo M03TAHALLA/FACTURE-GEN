@@ -8,7 +8,9 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 justify-content-center">
 
-  <a href=""><img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark" alt=""></a>
+
+  <a href="../Commun/home.php"><img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark" alt=""></a>
+
     <a class="navbar-brand ps-1" href="../Commun/home.php">    IN-VOICER</a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,11 +40,20 @@
       </ul>
       
       <div class="nav-item dropdown justify-content-end pe-5 me-2">
-          <a class="nav-link link-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Facturation</a>
+          <a class="nav-link link-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../Commun/AboutUs.php">ABOUT US</a></li>
-            <li><a class="dropdown-item" href="../Commun/contactUs.php">CONTACT US</a></li>
-            <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item" href="../Commun/ContactUs.php">CONTACT US</a></li>
+            <li><hr class="dropdown-divider"></li>    
+            <?php
+              if(isset($_SESSION['IdCommercial']) && $_SESSION['Admin'] == true){ ?>
+                <li><a class="dropdown-item" href="../AffichageListes/Show_Commercial_Liste.php">UTILISATEURS</a></li>
+                <li><hr class="dropdown-divider"></li> 
+                <?php  } ?>
+
+            
+
             
               <?php
               if(!isset($_SESSION['IdCommercial'])){ ?>

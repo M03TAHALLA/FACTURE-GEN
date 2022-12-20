@@ -54,10 +54,10 @@ if(isset($_POST['submit'])){
       $_SESSION['IdCommercial'] = $row['IdCommercial'];
       $_SESSION['Nom'] = $row['Nom'];
       $_SESSION['Prenom'] = $row['Prenom'];
-      $_SESSION['Role'] = $row['Role'];
       $_SESSION['Sexe'] = $row['Sexe'];
       $_SESSION['Email'] = $row['Email'];
       $_SESSION['Password'] = $row['Password'];
+      $_SESSION['Admin'] = $row['Admin'];
       header("Location: ../Commun/home.php");
       exit();
     }
@@ -79,18 +79,14 @@ if(isset($_POST['submit'])){
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
         <div class="card" style="border-radius: 1rem;">
-          <div class="row g-0">
-            <!-- <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="..\..\media\person-working-at-desk-in-vintage-90-s-style-office.webp"
-                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-            </div> -->
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        
+ 
               <div class="card-body p-4 p-lg-5 text-black">
 
                 <form action="" method="post">
                   
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                
                     <img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark " alt="">
                     <span class="h1 fw-bold mb-0  ps-2">IN-VOICER</span>
                   </div>
@@ -129,7 +125,7 @@ if(isset($_POST['submit'])){
         </div>
       </div>
     </div>
-  </div>
+
 </section>
 
 

@@ -6,11 +6,13 @@
   </head>
   <body>
 <?php 	include ("../Include/nav.php");?>
-<div class = "container ">
+<div class = "container my-5">
+
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">COMMERCIAUX</li>
     </ol>
-	<div class="table-responsive">
+	<a class="btn btn-primary " href="../Admin/AddUser.php" role="button">Ajouter Commercial</a>
+	<div class="table-responsive mt-2">
 		<table id="table_devis" class="table table-hover  ">
 		<thead class="table-dark">
       <tr>
@@ -21,6 +23,7 @@
         <th>Sexe</th>
         <th>Email</th>
         <th>Password</th>
+		<th>Action</th>
       </tr>
     </thead>
 		<?php
@@ -42,6 +45,13 @@
 			else
 				echo "Utilisateur <br>";
 		?></td>
+		<td>
+			<?php
+			echo 	"<a class='btn btn-primary btn-sm m-1' href='../Admin/ModifyUser.php?id=$ligne[IdCommercial]'>Modifier</a>";
+		
+			echo "<a class='btn btn-danger btn-sm' href='../Admin/DeleteUser.php?id=$ligne[IdCommercial]'>Supprimer</a>";
+			?>
+		</td>
       </tr>
 		<?php }
 		$mysqli->close();
