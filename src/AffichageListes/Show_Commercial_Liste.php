@@ -1,11 +1,14 @@
-<?php include("../../db/conn.php"); 
+<?php include("../../db/conn.php");
+ 
 	include("../Include/head.php"); 
 	
 	?>
 	  <title>COMMERCANTS</title>
   </head>
   <body>
-<?php 	include ("../Include/nav.php");?>
+<?php 	include ("../Include/nav.php");
+		 include("../Admin/Check_If_Admin.php");
+?>
 <div class = "container my-5">
 
 <ol class="breadcrumb   my-4 ">
@@ -27,9 +30,8 @@
       </tr>
     </thead>
 		<?php
-		$mysqli = new mysqli($servername,$username,$password,$username);
 		$requete = "SELECT * FROM commercial";
-		$resultat = $mysqli->query($requete);
+		$resultat = $conn->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {?>
 	<tbody>
       <tr scope="row">
@@ -54,7 +56,7 @@
 		</td>
       </tr>
 		<?php }
-		$mysqli->close();
+		$conn->close();
 		?>
 		</tbody>
 		</table>
