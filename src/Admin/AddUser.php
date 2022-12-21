@@ -70,7 +70,7 @@ do{
         break;
 
      }else{
-        $insert = "INSERT INTO commercial(Nom, Prenom, Email, Admin,Sexe,Password) VALUES('$nom','$prenom','$email',1,'Male','$password')";
+        $insert = "INSERT INTO commercial(Nom, Prenom, Email, Admin,Sexe,Password) VALUES('$nom','$prenom','$email','$user_type','$sexe','$password')";
         mysqli_query($conn, $insert);
         $success = "Utilisateur ajouté avec succèes !";
         header('location: ../AffichageListes/Show_Commercial_Liste.php');
@@ -162,7 +162,16 @@ while(false);
                     </div>
                   </div>
 
-
+   <div class=" flex-row align-items-center mb-4">
+                  
+                    <div class="form-outline  mb-0">
+                  <select name="user_type" class="form-select" style="width:auto;">
+                    <option value="user" <?php if($user_type == false) echo "selected"; ?>>user</option>
+                    <option value="admin" <?php if($user_type == true) echo "selected"; ?>>admin</option>
+                  </select>
+                  <label class="form-label" for="user_type">Role </label>
+                  </div>
+                  </div>
                   <?php 
                     if(!empty($success)){
                       echo "
@@ -177,16 +186,7 @@ while(false);
                       ";
                     }
                   ?>
-                  <div class=" flex-row align-items-center mb-4">
-                  
-                    <div class="form-outline  mb-0">
-                  <select name="user_type" class="form-select" style="width:auto;">
-                    <option value="user" <?php if($user_type == false) echo "selected"; ?>>user</option>
-                    <option value="admin" <?php if($user_type == true) echo "selected"; ?>>admin</option>
-                  </select>
-                  <label class="form-label" for="user_type">Role </label>
-                  </div>
-                  </div>
+               
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="submit" name="submit" class="btn btn-primary btn-lg">confirmer</button>
