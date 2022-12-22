@@ -1,3 +1,4 @@
+
 <?php 
 	include("../../db/conn.php"); 
 	include("../Include/head.php"); 
@@ -62,3 +63,4 @@ include("../Authentification/Check_if_Logged_In.php");?>
 		</table>
 		</div>
 	</div>
+	<?php include '../Include/foot.php'; ?>
