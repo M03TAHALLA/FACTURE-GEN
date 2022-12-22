@@ -25,16 +25,18 @@
           <a class="nav-link active" aria-current="page" href="../AffichageListes/Show_Devise_Liste.php">Devis</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link active" href="../AffichageListes/Show_Commandes_Liste.php">Bons de commande</a>
+          <a class="nav-link active" href="../AffichageListes/Show_Articles_Liste.php">Articles</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link active" href="../AffichageListes/Show_Client_Liste.php">Clients</a>
         </li>
 
         <li class="nav-item ">
           <a class="nav-link active" href="../Facturation/CreateDevis.php">Creer DV</a>
         </li>
 
-        <li class="nav-item ">
-          <a class="nav-link active" href="../Facturation/CreateBon_Commande.php">Creer BDC</a>
-        </li>
+     
 
         
       </ul>
