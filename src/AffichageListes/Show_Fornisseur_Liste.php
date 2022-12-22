@@ -1,13 +1,14 @@
-<?php include("../../db/conn.php"); 
-	include("../Include/head.php");
-	?>
-	<?php 	include ("../Include/nav.php");?>
+<?php 
+	include("../../db/conn.php"); 
+	include("../Include/head.php"); 
+?>
 
-	<?php include('Show_Client_Liste.php');?>
+<title>FOURNISSEURS</title>
 
-	  <title>FOURNISSEURS AND CLIENTS</title>
-  </head>
-  <body>
+</head>
+<body>
+<?php 	include ("../Include/nav.php");
+include("../Authentification/Check_if_Logged_In.php");?>
 	<div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">FORNISSEURS</li>

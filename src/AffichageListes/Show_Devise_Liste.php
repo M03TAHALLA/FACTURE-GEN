@@ -5,7 +5,10 @@
 	  <title>DEVIS</title>
   </head>
   <body>
-<?php 	include ("../Include/nav.php");?>
+<?php 	include ("../Include/nav.php");
+		include("../Authentification/Check_if_Logged_In.php");
+?>
+
         <div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">DEVISES</li>
