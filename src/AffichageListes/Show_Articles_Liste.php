@@ -11,10 +11,12 @@
 	  
         <div class = "container ">
 <ol class="breadcrumb   my-4 ">
+  
         <li class="breadcrumb-item active">ARTICLES</li>
     </ol>
+    <?php if($_SESSION['Admin'] == true){?>
     <a class="btn btn-primary " href="../Admin/AddArticle.php" role="button">Ajouter Article</a>
-
+    <?php }?>
 	<div class="table-responsive mt-2">
 		<table id="table_article" class="table table-hover  ">
 		<thead class="table-dark">
@@ -47,8 +49,8 @@
 			echo "<a class='btn btn-danger btn-sm' href='../Admin/DeleteArticle.php?id=$ligne[IdArticle]'>Supprimer</a>";
 			?>
 		</td>
-    <?php }
-		?>
+        <?php }
+        ?>
       </tr>
 		<?php }
 		$conn->close();
