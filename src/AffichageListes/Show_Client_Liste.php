@@ -1,4 +1,6 @@
-<?php include("../../db/conn.php"); 	?>
+<?php include("../../db/conn.php"); 
+	include("../Include/head.php"); 
+	?>
 	<div class = "container ">
 <ol class="breadcrumb   my-4 ">
         <li class="breadcrumb-item active">CLIENTS</li>
@@ -34,3 +36,4 @@
 		</table>
 		</div>
 	</div>
+	<?php include '../Include/foot.php'; ?>
