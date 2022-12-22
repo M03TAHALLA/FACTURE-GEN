@@ -13,7 +13,7 @@
 <div class="row align-items-center mb-5">
       <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
               <h2 class="font-weight-light">welcome to test web app.</h2>
-        <p class="font-italic text-muted mb-4">SCHIELE MAROC  propose différentes solutions pour optimiser vos activités commerciales.
+        <p class="font-italic text-muted mb-4">IN-VOICER  propose différentes solutions pour optimiser vos activités commerciales.
  Concentrez-vous sur votre cœur de métier. Simplifiez votre quotidien et prenez les bonnes décisions !</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
       </div>
       <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="../../media/undraw_Welcoming_re_x0qo.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
