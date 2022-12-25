@@ -46,7 +46,7 @@
         <?php if($_SESSION['Admin'] == true){?>
         <td>
 			<?php
-			echo 	"<a class='btn btn-primary btn-sm m-1' href='../Admin/ModifyArticle.php?id=$ligne[IdArticle]'>Modifier</a>";
+			echo 	"<a  class='btn btn-primary btn-sm m-1' href='../Admin/ModifyArticle.php?id=$ligne[IdArticle]'>Modifier</a>";
 		
 			echo "<a class='btn btn-danger btn-sm' href='../Admin/DeleteArticle.php?id=$ligne[IdArticle]'>Supprimer</a>";
 			?>
