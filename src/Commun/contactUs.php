@@ -2,6 +2,18 @@
 
 
 	  <title>CONTACT US</title>
+
+    <script type="text/javascript"
+        src="../Commun/sendMsg.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("fAb0YkEBgN7ULACL1");
+      })();
+    </script>
   </head>
   <body>
 <?php 	include ("../Include/nav.php");?>    
@@ -11,7 +23,7 @@
 <div class="container py-4">
 
   <!-- Bootstrap 5 starter form -->
-  <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+  <form id="contactForm"  data-sb-form-api-token="API_TOKEN">
 
     <!-- Name input -->
     <div class="mb-3">
@@ -47,7 +59,7 @@
 
     <!-- Form submit button -->
     <div class="d-grid">
-      <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Soumettre</button>
+      <button class="btn btn-primary btn-lg" onclick="sendMail()" id="submitButton" type="submit">Soumettre</button>
     </div>
 
   </form>
@@ -57,5 +69,7 @@
 
 <!-- SB Forms JS -->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
 
 <?php include '../Include/foot.php'; ?>

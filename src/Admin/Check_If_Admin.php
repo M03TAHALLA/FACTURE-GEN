@@ -7,3 +7,4 @@ if(!isset($_SESSION['IdCommercial']) || $_SESSION['Admin'] == false){
 }
 
 ?>
+

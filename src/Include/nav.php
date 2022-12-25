@@ -42,7 +42,7 @@
       </ul>
       
       <div class="nav-item dropdown justify-content-end pe-5 me-2">
-          <a class="nav-link link-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+          <div class="nav-link link-dark dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</div>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../Commun/AboutUs.php">ABOUT US</a></li>
 
