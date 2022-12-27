@@ -11,14 +11,24 @@ if(isset($_POST["query"]))
 	WHERE idClient LIKE '%".$search."%'
 	OR Nom LIKE '%".$search."%' 
 	OR Prenom LIKE '%".$search."%' 
-	OR Email LIKE '%".$search."%' 
 	OR Sexe LIKE '%".$search."%' 
-	OR Adresse LIKE '%".$search."%'
 	";
 	$result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
 {
 	$output .= '
+	<style>
+		#Confirmer{
+			margin-bottom:10px;
+			position:relative;
+			left: 500px;
+		}
+		#Confirmer:hover{
+			background-color:green;
+		}
+	</style>
+	<form id="form">
+	<script src="config.js"></script>
     <div class="table-responsive">
 					<table class="table table-hover">
                     <thead class="table-dark">
@@ -29,7 +39,7 @@ if(mysqli_num_rows($result) > 0)
 							<th>Email</th>
 							<th>Sexe</th>
 							<th>Adresse</th>
-                            <th><th>
+							<th></th>
                         </thead>';
 	while($row = mysqli_fetch_array($result))
 	{
@@ -42,18 +52,18 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["Email"].'</td>
 				<td>'.$row["Sexe"].'</td>
 				<td>'.$row["Adresse"].'</td>
-                <td>
-                <a class="btn btn-primary btn-sm m-1" >Ajouter</a>
-                            </td>
+				<td><input type="checkbox" name="article" value="1"></td>
 			</tr>
             </tbody>
+			</form>
 		';
 	}
+	$output.='<input id="Confirmer" class="btn btn-primary btn-lg" type="submit" value="Confirmer">';
 	echo $output;
 }
 else
 {
-	echo 'Data Not Found';
+	echo '<strong> Data Not Found</strong>';
 }
 }
 else
