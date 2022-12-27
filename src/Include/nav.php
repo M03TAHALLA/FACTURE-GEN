@@ -33,7 +33,7 @@
         </li>
 
         <li class="nav-item ">
-          <a class="nav-link active" href="../Facturation/CreateDevis.php">Creer DV</a>
+          <a class="nav-link active" href="../Facturation/CreateDevisClient.php">Creer DV</a>
         </li>
 
      
