@@ -6,8 +6,13 @@ include("../Include/head.php");
 	<head>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>CREATE DEVIS</title>
+		<title>Client...</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<style>
+			#PageClient{
+				margin-left:1000px;
+			}
+		</style>
 	</head>
 	<body>
 	<?php 	include ("../Include/nav.php");?>
@@ -36,7 +41,11 @@ include("../Include/head.php");
 		<br />
 		<br />
 		<br />
+
 	</body>
+	<form action="CreateDevisArticle.php">
+		<input id="PageClient" class="btn btn-primary btn-lg" type="submit" value="Page Article -----> ">
+</form>
 </html>
 <?php include '../Include/foot.php'; ?>
 
@@ -46,7 +55,7 @@ $(document).ready(function(){
 	function load_data(query)
 	{
 		$.ajax({
-			url:"config.php",
+			url:"configClient.php",
 			method:"post",
 			data:{query:query},
 			success:function(data)

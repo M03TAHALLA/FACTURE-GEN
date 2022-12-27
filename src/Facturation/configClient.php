@@ -26,6 +26,7 @@ if(mysqli_num_rows($result) > 0)
 		#Confirmer:hover{
 			background-color:green;
 		}
+		  
 	</style>
 	<form id="form">
 	<script src="config.js"></script>
@@ -52,7 +53,7 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["Email"].'</td>
 				<td>'.$row["Sexe"].'</td>
 				<td>'.$row["Adresse"].'</td>
-				<td><input type="checkbox" name="article" value="1"></td>
+				<td><input class="checkbox" type="checkbox" name="article" ></td>
 			</tr>
             </tbody>
 			</form>
