@@ -1,5 +1,4 @@
 <?php
-include("../../db/conn.php"); 
 include("../Include/head.php");
 $connect = mysqli_connect("sql7.freesqldatabase.com", "sql7586075", "lit9GXL9wY", "sql7586075");
 $output = '';
@@ -15,7 +14,9 @@ if(isset($_POST["query"]))
 	";
 	$result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
-{
+{?>
+ <form 	action="CreateDevisArticle.php" >
+<?php
 	$output .= '
 	<style>
 		#Confirmer{
@@ -53,13 +54,12 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["Email"].'</td>
 				<td>'.$row["Sexe"].'</td>
 				<td>'.$row["Adresse"].'</td>
-				<td><input class="checkbox" type="checkbox" name="article" ></td>
+				<td><input class="checkbox" type="checkbox" name="check" ></td>
 			</tr>
             </tbody>
 			</form>
 		';
 	}
-	$output.='<input id="Confirmer" class="btn btn-primary btn-lg" type="submit" value="Confirmer">';
 	echo $output;
 }
 else
@@ -72,5 +72,4 @@ else
 	$query = "
 	SELECT * FROM client ORDER BY idClient";
 }
-
 ?>

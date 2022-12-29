@@ -1,5 +1,4 @@
 <?php
-include("../../db/conn.php"); 
 include("../Include/head.php");
 $connect = mysqli_connect("sql7.freesqldatabase.com", "sql7586075", "lit9GXL9wY", "sql7586075");
 $output = '';
@@ -21,7 +20,8 @@ if(mysqli_num_rows($result) > 0)
 		#Confirmer{
 			margin-bottom:10px;
 			position:relative;
-			left: 500px;
+			left: 450px;
+			margin-top: 10px;
 		}
 		#Confirmer:hover{
 			background-color:green;
@@ -50,14 +50,14 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["NomArticle"].'</td>
 				<td>'.$row["Description"].'</td>
 				<td>'.$row["Prix"].'</td>
-				<td><input class="checkbox" type="checkbox" name="client" ></td>
+				<td><input class="checkbox" type="checkbox" name="check" ></td>
                 <td><input type="number" id="price" placeholder="Price"></td>
 			</tr>
             </tbody>
 			</form>
 		';
 	}
-	$output.='<input id="Confirmer" class="btn btn-primary btn-lg" type="submit" value="Confirmer">';
+	$output.='<input id="Confirmer" class="btn btn-primary btn-lg" type="submit" value="Confirmer Vos Choix">';
 	echo $output;
 }
 else
@@ -68,7 +68,7 @@ else
 else
 {
 	$query = "
-	SELECT * FROM client ORDER BY idClient";
+	SELECT * FROM articles ORDER BY IdArticle";
 }
 
 ?>

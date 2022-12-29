@@ -15,6 +15,7 @@ include("../Include/head.php");
 		</style>
 	</head>
 	<body>
+
 	<?php 	include ("../Include/nav.php");?>
 		<div class="container">
 			<br />
@@ -43,11 +44,6 @@ include("../Include/head.php");
 		<br />
 
 	</body>
-	<form action="CreateDevisArticle.php">
-		<input id="PageClient" class="btn btn-primary btn-lg" type="submit" value="Page Article -----> ">
-</form>
-</html>
-<?php include '../Include/foot.php'; ?>
 
 <script>
 $(document).ready(function(){
@@ -78,3 +74,61 @@ $(document).ready(function(){
 	});
 });
 </script>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Article...</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h2 align="center">Search Articles </h2><br />
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" name="search_text" id="search_article" placeholder="Search by Customer Details" class="form-control" />
+                        <select class="selectpicker">
+                            <option value="volvo">IDArticle</option>
+                            <option value="saab">NomArticle</option>
+                            <option value="opel">Description</option>
+                            <option value="audi">Prix</option>
+                        </select>
+				</div>
+			</div>
+			<div id="resultArticle"></div>
+		</div>
+		<div style="clear:both"></div>
+		<br>
+	</body>
+</html>
+<script>
+$(document).ready(function(){
+	load_data();
+	function load_data(query)
+	{
+		$.ajax({
+			url:"configArticle.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#resultArticle').html(data);
+			}
+		});
+	}
+	
+	$('#search_article').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
+</script>
+<?php include '../Include/foot.php'; ?>
+
+
