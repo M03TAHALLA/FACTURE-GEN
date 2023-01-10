@@ -11,9 +11,11 @@
 
         <div class = "container ">
 <ol class="breadcrumb   my-4 ">
-        <li class="breadcrumb-item active">DEVISES</li>
+        <li class="breadcrumb-item active">DEVIS</li>
     </ol>
-	<div class="table-responsive">
+	<a class="btn btn-primary " href="#" role="button">Creer Devis</a>
+
+	<div class="table-responsive mt-2">
 		<table id="table_devis" class="table table-hover  ">
 		
 		<thead class="table-dark">
@@ -23,6 +25,8 @@
         <th>DateCréation</th>
 		<th>DateExpiration</th>
         <th>TotalePrix</th>
+		<th>Action</th>
+
       </tr>
     </thead>
 			
@@ -34,11 +38,16 @@
 		
 	<tbody>
       <tr scope="row">
-        <td><?php echo @$ligne['NumDevis']?></th>
+        <td><?php echo @$ligne['NumDevis']?></td>
         <td><?php echo @$ligne['IdClient']?></td>
         <td><?php echo @$ligne['DateCreation']?></td>
 		<td><?php echo @$ligne['DateExpiration']?></td>
 		<td><?php echo @$ligne['TotalePrix'].'<br>'?></td>
+		<td>
+			<?php		
+			echo "<a class='btn btn-danger btn-sm' href='../Facturation/DeleteDevis.php?id=$ligne[NumDevis]'>Supprimer</a>";
+			?>
+		</td>
       </tr>
 		<?php }
 		$mysqli->close();
