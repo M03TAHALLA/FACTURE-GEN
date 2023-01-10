@@ -34,7 +34,7 @@
         <th>IdClient</th>
         <th>DateCréation</th>
 		<th>DateExpiration</th>
-        <th>TotalePrix</th>
+        <!-- <th>TotalePrix</th> -->
 		<th>Action</th>
 
       </tr>
@@ -43,6 +43,7 @@
 		<?php
 		$mysqli = new mysqli($servername,$username,$password,$username);
 		$requete = "SELECT * FROM fichdevis";
+
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {?>
 		
@@ -52,7 +53,7 @@
         <td><?php echo @$ligne['IdClient']?></td>
         <td><?php echo @$ligne['DateCreation']?></td>
 		<td><?php echo @$ligne['DateExpiration']?></td>
-		<td><?php echo @$ligne['TotalePrix'].'<br>'?></td>
+		<!-- <td><?php // echo @$ligne['TotalePrix'].'<br>'?></td> -->
 		<td>
 			<?php		
 			echo "<a class='btn btn-danger btn-sm m-1' href='../Facturation/DeleteDevis.php?id=$ligne[NumDevis]'>Supprimer</a>";
