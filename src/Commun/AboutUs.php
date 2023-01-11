@@ -148,7 +148,7 @@
   <p>Nous avons conçu un projet d'application Web pour la gestion des devis qui comprend des fonctionnalités de facturation faciles à utiliser avec un interface d'administration. Pour le développement de la partie frontend, nous avons choisi HTML, CSS, JavaScript et Bootstrap. Le backend a été conçu en PHP et un service basé sur le Web fournit gratuitement la base de données SQL <span style="color:blue; cursor:pointer"><u>(https://www.freesqldatabase.com/).</u></span> Nous avons opté pour un design épuré et une gamme réduite de couleurs pour une interface facile à utiliser par les utilisateurs et un logo approprié. Dans la plupart des styles, nous avons utilisé Bootstrap comme base principale.</p>
   <ul class="cards">
     <li>
-      <a href="" class="card">
+      <a href= "https://github.com/SimoAs"class="card">
         <img src="index2.jpg" class="card__image" alt="" />
         <div class="card__overlay">
           <div class="card__header">
@@ -159,13 +159,13 @@
               <span class="card__status">Etudiant ESTSB </span>
             </div>
           </div>
-          <p class="card__description">Hello I'm <strong><U>TAHALLA MOHAMMED<U></strong> &#128075;
+          <p class="card__description" >Hello I'm <strong><U>TAHALLA MOHAMMED<U></strong> &#128075;
           </p>
         </div>
       </a>      
     </li>
     <li>
-      <a href="" class="card">
+      <a href="https://github.com/ABR-X" class="card">
         <img src="index.jpg" class="card__image" alt="" />
         <div class="card__overlay">        
           <div class="card__header">
@@ -176,7 +176,7 @@
               <span class="card__status">Etudiant ESTSB</span>
             </div>
           </div>
-          <p class="card__description">Hello I'm <strong><U>ABDERHMMAN AIT ELMOUDDEN<U></strong> &#128075;</p>
+            <p class="card__description" >Hello I'm <strong> <U> ABDERHMMAN AIT ELMOUDDEN<U></strong> &#128075;</p>
         </div>
       </a>
     </li>
