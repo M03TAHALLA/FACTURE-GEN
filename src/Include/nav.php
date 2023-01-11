@@ -6,12 +6,22 @@
 
 
   <!-- NAVBAR -->
+  <style>
+    #Show{
+      margin-right:20px;
+    }
+    #Show:hover{
+      text-decoration : underline;
+      color:red;
+
+    }
+  </style>
   <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 justify-content-center">
 
 
   <a href="../Commun/home.php"><img src="..\..\media\INv.webp" width="60" height="60"  class="rounded  bg-dark" alt=""></a>
 
-    <a class="navbar-brand ps-1" href="../Commun/home.php">    IN-VOICER</a>
+    <a class="navbar-brand ps-1" href="../Commun/home.php">    FACTURE.com</a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,7 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../AffichageListes/Show_Devise_Liste.php">Devis</a>
+          <a class="nav-link active" id="Show" aria-current="page" href="../Facturation/ShowDevis.php">ShowDevisDisponible </a>
         </li>
         <li class="nav-item ">
           <a class="nav-link active" href="../AffichageListes/Show_Articles_Liste.php">Articles</a>
@@ -33,7 +43,7 @@
         </li>
 
         <li class="nav-item ">
-          <a class="nav-link active" href="../Facturation/CreateDevisClient.php">Creer DV</a>
+          <a class="nav-link active" href="../AffichageListes/Show_Devise_Liste.php">Creer DV</a>
         </li>
 
      
@@ -53,10 +63,11 @@
                 <li><a class="dropdown-item" href="../AffichageListes/Show_Commercial_Liste.php">UTILISATEURS</a></li>
                 <li><hr class="dropdown-divider"></li> 
                 <?php  } ?>
-
-            
-
-            
+                <?php
+              if(isset($_SESSION['IdCommercial']) && $_SESSION['Admin'] == true){ ?>
+                <li><a class="dropdown-item" href="../Facturation/ShowAD.php">Show Article/Client</a></li>
+                <li><hr class="dropdown-divider"></li> 
+                <?php  } ?>
               <?php
               if(!isset($_SESSION['IdCommercial'])){ ?>
                 <li><a class="dropdown-item" href="../Authentification/login.php">LOGIN</a></li>

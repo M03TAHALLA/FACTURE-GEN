@@ -17,7 +17,7 @@ include("../Authentification/Check_if_Logged_In.php");?>
     </ol>
 <!-- ADD CLIENT BUTTON  -->
 	<?php if($_SESSION['Admin'] == true){?>
-    <a class="btn btn-primary " href="../Admin/addClient.php" role="button">Ajouter Article</a>
+    <a class="btn btn-primary " href="../Admin/addClient.php" role="button">Ajouter Client</a>
     <?php }?>
 
 	<div class="table-responsive mt-2">

@@ -1,6 +1,6 @@
 <?php
 include("../Include/head.php");
-$connect = mysqli_connect("sql7.freesqldatabase.com", "sql7586075", "lit9GXL9wY", "sql7586075");
+$connect = mysqli_connect("sql7.freesqldatabase.com", "sql7589420", "4fYqwFelZq", "sql7589420");
 $output = '';
 if(isset($_POST["query"]))
 {
@@ -29,7 +29,7 @@ if(mysqli_num_rows($result) > 0)
 		}
 		  
 	</style>
-	<form id="form">
+
 	<script src="config.js"></script>
     <div class="table-responsive">
 					<table class="table table-hover">
@@ -41,7 +41,6 @@ if(mysqli_num_rows($result) > 0)
 							<th>Email</th>
 							<th>Sexe</th>
 							<th>Adresse</th>
-							<th></th>
                         </thead>';
 	while($row = mysqli_fetch_array($result))
 	{
@@ -54,11 +53,10 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["Email"].'</td>
 				<td>'.$row["Sexe"].'</td>
 				<td>'.$row["Adresse"].'</td>
-				<td><input class="checkbox" type="checkbox" name="check" ></td>
 			</tr>
             </tbody>
-			</form>
-		';
+
+			';
 	}
 	echo $output;
 }
