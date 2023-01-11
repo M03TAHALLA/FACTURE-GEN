@@ -12,6 +12,16 @@ include("../Include/head.php");
 			#PageClient{
 				margin-left:1000px;
 			}
+			#search_text{
+				border:solid 2px;
+			}
+			#search_article{
+				border:solid 2px;	
+				margin-bottom :20px;
+			}
+			.selectpicker{
+				margin-bottom :20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -24,8 +34,8 @@ include("../Include/head.php");
 			<h2 align="center">Search Clients </h2><br />
 			<div class="form-group">
 				<div class="input-group">
-					<input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
-                        <select class="selectpicker">
+					<input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" /><br>
+                        <select class="selectpicker1">
                             <option value="volvo">ID</option>
                             <option value="saab">Nom</option>
                             <option value="opel">Prenom</option>
@@ -42,9 +52,6 @@ include("../Include/head.php");
 		<br />
 		<br />
 		<br />
-
-	</body>
-
 <script>
 $(document).ready(function(){
 	load_data();
@@ -91,14 +98,17 @@ $(document).ready(function(){
                             <option value="saab">NomArticle</option>
                             <option value="opel">Description</option>
                             <option value="audi">Prix</option>
-                        </select>
+						</select>
 				</div>
 			</div>
 			<div id="resultArticle"></div>
 		</div>
 		<div style="clear:both"></div>
 		<br>
-	</body>
+		<br />
+		<br />
+		<br />
+		</body>
 </html>
 <script>
 $(document).ready(function(){

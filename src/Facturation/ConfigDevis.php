@@ -6,51 +6,53 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT * FROM articles 
-	WHERE IdArticle LIKE '%".$search."%'
-	OR NomArticle LIKE '%".$search."%' 
-	OR Description LIKE '%".$search."%'
-    OR Prix LIKE '%".$search."%' 
+	SELECT * FROM fichdevis 
+	WHERE NumDevis LIKE '%".$search."%'
+    OR IdClient LIKE '%".$search."%'
+	OR TotalePrix LIKE '%".$search."%' 
 	";
 	$result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
-{
+{?>
+<?php
 	$output .= '
 	<style>
 		#Confirmer{
 			margin-bottom:10px;
 			position:relative;
-			left: 450px;
-			margin-top: 10px;
+			left: 500px;
 		}
 		#Confirmer:hover{
 			background-color:green;
 		}
 		  
 	</style>
-	<form>
-	<script src="configa.js"></script>
+
+	<script src="config.js"></script>
     <div class="table-responsive">
 					<table class="table table-hover">
                     <thead class="table-dark">
 						<tr >
-							<th>IdArticle</th>
-							<th>NomArticle</th>
-							<th>Description</th>
-							<th>Prix</th>
+							<th>NumDevis</th>
+							<th>idClient</th>
+							<th>DateCreation</th>
+							<th>DateExpiration</th>
+							<th>TotalePrix</th>
                         </thead>';
 	while($row = mysqli_fetch_array($result))
 	{
 		$output .= '
         <tbody>
 			<tr scope="row">
-				<td>'.$row["IdArticle"].'</td>
-				<td>'.$row["NomArticle"].'</td>
-				<td>'.$row["Description"].'</td>
-				<td>'.$row["Prix"].'</td>
+				<td>'.$row["NumDevis"].'</td>
+				<td>'.$row["IdClient"].'</td>
+				<td>'.$row["DateCreation"].'</td>
+				<td>'.$row["DateExpiration"].'</td>
+				<td>'.$row["TotalePrix"].'</td>
 			</tr>
             </tbody>
-		';
+
+			';
 	}
 	echo $output;
 }
@@ -62,7 +64,6 @@ else
 else
 {
 	$query = "
-	SELECT * FROM articles ORDER BY IdArticle";
+	SELECT * FROM fichdevis ORDER BY NumDevis";
 }
-
 ?>
