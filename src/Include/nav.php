@@ -31,9 +31,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" id="Show" aria-current="page" href="../Facturation/ShowDevis.php">ShowDevisDisponible </a>
-        </li>
+     
         <li class="nav-item ">
           <a class="nav-link active" href="../AffichageListes/Show_Articles_Liste.php">Articles</a>
         </li>
@@ -43,7 +41,7 @@
         </li>
 
         <li class="nav-item ">
-          <a class="nav-link active" href="../AffichageListes/Show_Devise_Liste.php">Creer DV</a>
+          <a class="nav-link active" href="../AffichageListes/Show_Devise_Liste.php">Devis</a>
         </li>
 
      
@@ -57,19 +55,24 @@
             <li><a class="dropdown-item" href="../Commun/AboutUs.php">ABOUT US</a></li>
 
             <li><a class="dropdown-item" href="../Commun/ContactUs.php">CONTACT US</a></li>
+            <li class="nav-item">
+          <a class="nav-link active" id="Show" aria-current="page" href="../Facturation/ShowDevis.php">Devis Dispo </a></li>
             <li><hr class="dropdown-divider"></li>    
             <?php
               if(isset($_SESSION['IdCommercial']) && $_SESSION['Admin'] == true){ ?>
                 <li><a class="dropdown-item" href="../AffichageListes/Show_Commercial_Liste.php">UTILISATEURS</a></li>
                 <li><hr class="dropdown-divider"></li> 
                 <?php  } ?>
+
                 <?php
               if(isset($_SESSION['IdCommercial']) && $_SESSION['Admin'] == true){ ?>
                 <li><a class="dropdown-item" href="../Facturation/ShowAD.php">Show Article/Client</a></li>
+                
                 <li><hr class="dropdown-divider"></li> 
                 <?php  } ?>
               <?php
               if(!isset($_SESSION['IdCommercial'])){ ?>
+          
                 <li><a class="dropdown-item" href="../Authentification/login.php">LOGIN</a></li>
                 <?php }
                 else{ ?>
